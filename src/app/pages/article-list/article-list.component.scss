@@ -1,0 +1,36 @@
+.card-body {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 4px;
+  margin-top: 15px;
+  display: flex;
+
+  .cardimage {
+    padding: 15px;
+
+    img {
+      max-height: 200px;
+    }
+  }
+
+  .cardtext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+      font-size: 32px;
+      margin: 0;
+    }
+
+    div {
+      color: #808080;
+      font-size: 14px;
+      margin-top: 5%;
+    }
+
+    a {
+      font-style: italic;
+      color: #808080;
+    }
+  }
+}
