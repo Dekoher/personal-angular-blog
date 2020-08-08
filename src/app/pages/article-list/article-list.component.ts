@@ -4,6 +4,7 @@ import { ARTICLES } from './mock/mock-articles';
 import { ArticleService } from '../../services/article/article.service';
 import { Title } from '@angular/platform-browser';
 import { SharedService } from '../../services/shared/shared.service';
+import { ArticleService } from '../../services/article.service';
 
 @Component({
   selector: 'article-list',
@@ -20,6 +21,13 @@ export class ArticleListComponent implements OnInit {
 
   ngOnInit(): void {
     this.titleService.setTitle(`${this.sharedService.titleBlog}`);
+  styleUrls: ['./article-list.component.scss']
+})
+export class ArticleListComponent implements OnInit {
+  articles: Article[] = [];
+  constructor(private articleService: ArticleService) { }
+
+  ngOnInit(): void {
     this.getArticles();
   }
 
@@ -27,5 +35,6 @@ export class ArticleListComponent implements OnInit {
     this.articleService
       .getArticles()
       .subscribe((articles) => (this.articles = articles));
+    this.articleService.getArticles().subscribe(articles => (this.articles = articles));
   }
 }

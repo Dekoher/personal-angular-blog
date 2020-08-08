@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ArticleService } from '../../services/article/article.service';
 import { SharedService } from '../../services/shared/shared.service';
 import { Title, Meta } from '@angular/platform-browser';
+import { ArticleService } from 'src/app/services/article.service';
 
 @Component({
   selector: 'app-article',
@@ -61,6 +62,16 @@ export class ArticleComponent implements OnInit {
           },
         ]);
       });
+      this.articleService.getArticle(key).subscribe(
+        article => {
+          if (article === undefined) {
+            this.router.navigateByUrl('404');
+            return;
+          }
+          this.article = article;
+          console.log(this.article);
+        }
+      );
     });
   }
 }

@@ -17,4 +17,12 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle(`${this.title} - ${this.sharedService.titleBlog}`);
   }
+  styleUrls: ['./about.component.scss']
+})
+export class AboutComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 }
