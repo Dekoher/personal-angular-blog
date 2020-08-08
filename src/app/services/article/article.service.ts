@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { Article } from '../pages/article-list/mock/article';
-import { ARTICLES } from '../pages/article-list/mock/mock-articles';
+import { of, Observable } from 'rxjs';
+import { Article } from '../../pages/article-list/mock/article';
+import { ARTICLES } from '../../pages/article-list/mock/mock-articles';
 
 @Injectable({
   providedIn: 'root'
