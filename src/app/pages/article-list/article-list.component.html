@@ -7,7 +7,7 @@
     </div>
     <div class="cardtext">
       <h3>{{ article.title}}</h3>
-      <div class="metainfo">{{ article.date.toDateString() }}</div>
+      <div class="metainfo">{{ article.date | date}}</div>
       <p [innerHtml]='article.description'></p>
       <a routerLink='/{{article.key}}' class='continuereading'>Continue reading</a>
     </div>

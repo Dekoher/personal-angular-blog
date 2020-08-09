@@ -9,6 +9,7 @@ import { ArticleListComponent } from './pages/article-list/article-list.componen
 import { AboutComponent } from './about/about.component';
 import { ArticleComponent } from './components/article/article.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
